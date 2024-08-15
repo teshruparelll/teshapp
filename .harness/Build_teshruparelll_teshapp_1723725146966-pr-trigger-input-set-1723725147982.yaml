@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_teshruparelll_teshapp_1723725146966-pr-trigger-input-set
+  identifier: Build_teshruparelll_teshapp_1723725146966prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: teshapp
+  pipeline:
+    identifier: Build_teshruparelll_teshapp_1723725146966
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
