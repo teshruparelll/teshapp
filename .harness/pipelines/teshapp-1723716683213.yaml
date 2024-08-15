@@ -40,20 +40,15 @@ pipeline:
                   timeout: ""
                   type: Run
               - step:
-                  identifier: dockerbuild
-                  name: docker_build
-                  spec:
-                    caching: true
-                    connectorRef: <+input>
-                    repo: hello/world
-                    tags:
-                      - latest
-                  timeout: ""
-                  type: BuildAndPushDockerRegistry
+                  name: Build
+                  identifier: Build
+                  template:
+                    templateRef: org.DockerBuild
+                    versionLabel: "1"
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
